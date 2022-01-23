@@ -8,8 +8,43 @@ public class Firstjavaprog {
 
         System.out.println(cat);
 
-        int a = 5;
-        int b = 3;
-        System.out.println("hi world " + (a+b));
+
+        Book book1 = new Book("the 3 body problem", 300);
+        System.out.println(book1);
+
+    }
+}
+
+class Book {
+    private String name;
+    private Integer numPage;
+
+    public Book(String name, Integer numPage) {
+        this.name = name;
+        this.numPage = numPage;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getNumPage() {
+        return numPage;
+    }
+
+    public void setNumPage(Integer numPage) {
+        this.numPage = numPage;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "name='" + name + '\'' +
+                ", numPage=" + numPage +
+                '}';
     }
 }
